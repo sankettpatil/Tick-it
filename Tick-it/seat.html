@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Tick-it Seat Booking</title>
+
+
+  <link rel="stylesheet" href="seat-css/main.css" />
+
+  <link rel="icon" type="image/png" href="seat-images/iconn.png">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-custom">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+          <img src="seat-images/iconn.png" style="width: 120px;"/>
+      </a>
+    </div>
+</nav>
+  <div class="content">
+    <label class="title" for="">Book Your Favourite Seats</label>
+    <select name="" id="film">
+      <option value="320"> Thor:Love The Thunder<span class="price"> ₹320.00</span></option>
+      <option value="300">RRR <span class="price"> ₹ 300.00</span></option>
+      <option value="240">Jurassic World Dominion<span class="price"> ₹ 240.00</span></option>
+    </select>
+  </div>
+
+
+  <div class="cinemaInfo">
+    <div class="seat info"></div>
+    <small>Free</small>
+
+
+    <div class="seat info selected"></div>
+    <small>Selected</small>
+
+
+    <div class="seat info occupied"></div>
+    <small>Occupied</small>
+  </div>
+
+  <div class="theatre">
+    <div class="screenArea"><span>All Eyes This Way Please</span></div>
+    <div class="theatreRows">
+      <div class="row" id="1">
+        <div class="rowNumb" id="1"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seatwheelChair" id="4"><img class="wheelChair" src="seat-images/wheelchair.png" alt=""></div>
+        <div class="seatwheelChair" id="4"><img class="wheelChair" src="seat-images/wheelchair.png" alt=""></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat occupied" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="2">
+        <div class="rowNumb" id="2"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat occupied" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="3">
+        <div class="rowNumb" id="3"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="4">
+        <div class="rowNumb" id="4"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+      <div class="row" id="5">
+        <div class="rowNumb" id="5"></div>
+        <div class="seat" id="1"></div>
+        <div class="seat" id="2"></div>
+        <div class="seat" id="3"></div>
+        <div class="seat" id="4"></div>
+        <div class="seat" id="5"></div>
+        <div class="seat" id="6"></div>
+        <div class="seat" id="7"></div>
+        <div class="seat" id="8"></div>
+        <div class="seat" id="9"></div>
+        <div class="seat" id="10"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout">
+    <div class="checkOutAreaOne">
+      <span> Position (S/F):</span>
+      <div class="place"></div>
+      <br>
+      <div class="checkoutTotal">
+        <span> Total Seats Occupied: </span> <span class="totalseats"> 0 </span>
+        <span> Total  ₹ : </span> <span class="cost"> 0 </span>
+      </div>
+
+      <br>
+    </div>
+
+    <div class="checkOutAreaTwo">
+      <!-- BACKEND ROUTE -->
+      <form action="thank.html" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_test_51LIoWuSJBFwExInqjI9shySkzIOY55FZCUyGbtvZt0vrUNKQOIlBJ9QjDpwKosm3bqNDrBHxm8KRVkEzZsC4DX8G00MawYdYIc"
+          data-amount="0" data-name="DYP PBL Project " data-description="Tick-it Payment Gateway"
+          data-image="img/iconn.png" data-locale="auto" data-currency="inr">
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+
+
+        <button type="submit" class="btnbook">Book Now</button>
+
+      </form>
+
+
+    </div>
+  </div>
+
+
+  <script src="seat-js/main.js"></script>
+
+</body>
+
+</html>
